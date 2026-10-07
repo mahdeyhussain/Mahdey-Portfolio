@@ -34,11 +34,43 @@
         <article>
             <section>
                 <h2>Contact Me</h2>
-                <p>Placeholder text. I'll write my welcome message here.</p>
+                <p>Have a question or want to work together? Fill out the form below and I'll get back to you!</p>
             </section>
             <section>
                 <h2>Send Me a Message</h2>
-                <p>Placeholder text. A short overview of my website.</p>
+                <!-- form sends the visitor's message to my email using mailto (week 2)-->
+                <form action="mailto:mahdey.hussain@ontariotechu.net" method="post" enctype="text/plain"
+                    name="contact_form">
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" size="32" placeholder="Enter your full name"
+                            required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" size="32" placeholder="Enter your email address"
+                            required>
+                    </p>
+                    <p>
+                        <!-- pattern only accepts exactly 10 digits; syntax from W3Schools (cited in README) -->
+                        <label for="phone">Cell No.:</label>
+                        <input type="tel" id="phone" name="phone" size="32" placeholder="e.g. 6471235890"
+                            pattern="[0-9]{10}" title="Enter a 10-digit phone number (numbers only)" required>
+                    </p>
+                    <p>
+                        <label for="comments">Message:</label><br>
+                        <textarea id="comments" name="comments" cols="60" rows="6"
+                            placeholder="Question, comment or query..." required></textarea>
+                    </p>
+                    <p>
+                        <label for="robot">What is 2 + 2? (So I know you aren't a robot)</label>
+                        <input type="number" id="robot" name="robot" min="4" max="4" required>
+                    </p>
+                    <p>
+                        <input type="submit" value="Send Message">
+                        <input type="reset" value="Clear Form">
+                    </p>
+                </form>
             </section>
         </article>
         <!-- footer: contact email and copyright, same on every page -->

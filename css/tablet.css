@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* tablet.css - styles for tablets (481px to 959px wide) */
+
+/* Colour scheme from Adobe Color ("Portfolio Colours"):
+   #1B2A41 deep navy     - header, footer, main text
+   #324A5F steel blue    - project boxes, sub-headings
+   #CCC9DC grey-blue     - page background
+   #EEF2F7 soft white    - wrapper background, light text
+   #F46036 burnt orange  - highlights and buttons */
+
+/* body: whole page. Linear gradient from top to bottom (Week 1) */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    color: #1B2A41;
+    background: #CCC9DC;
+    /* fallback colour if a browser can't show gradients */
+    background: linear-gradient(to bottom, #CCC9DC 0%, #EEF2F7 100%);
+    background-attachment: fixed;
+    /* keeps the gradient fixed to the window so it doesn't repeat on short pages */
+}
+
+/* wrapper: fluid width so content fills the tablet screen (Week 3) */
+#wrapper {
+    width: 100%;
+    /* fluid: fills the tablet screen instead of a fixed 960px */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EEF2F7;
+}
+
+/* header: angled linear gradient at 45 degrees (Week 1) */
+header {
+    background: #1B2A41;
+    /* fallback colour */
+    background: linear-gradient(45deg, #1B2A41 0%, #324A5F 100%);
+    color: #EEF2F7;
+    padding: 20px;
+}
+
+/* compound style: only the h1 inside the header (Week 1) */
+header h1 {
+    margin: 0px;
+    color: #EEF2F7;
+}
+
+/* nav links: light text with no underline */
+nav a {
+    color: #EEF2F7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* pseudo-class: changes link colour when hovered (Week 1) */
+nav a:hover {
+    color: #F46036;
+}
+
+/* article: space around the main content */
+article {
+    padding: 15px 4%;
+    /* fluid side padding */
+}
+
+/* footer: solid navy bar at the bottom of each page */
+footer {
+    clear: both;
+    background-color: #1B2A41;
+    color: #EEF2F7;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #EEF2F7;
+}
+
+/* sub-headings in the steel blue from the colour scheme */
+h2 {
+    color: #324A5F;
+    clear: both;
+    /* starts each h2 below any floated photo or boxes above it */
+}
+
+/* project boxes: one column on tablets (fewer columns, Week 3) */
+.project {
+    float: none;
+    width: auto;
+    margin: 15px 0px;
+    padding: 15px;
+    background-color: #324A5F;
+    color: #EEF2F7;
+    border-radius: 10px;
+}
+
+/* project titles with an orange underline bar */
+.project h3 {
+    margin-top: 0px;
+    color: #EEF2F7;
+    border-bottom: 3px solid #F46036;
+    padding-bottom: 5px;
+}
+
+/* pseudo-class: shadow appears when a box is hovered */
+.project:hover {
+    box-shadow: 5px 5px 10px #1B2A41;
+}
+
+/* photo frame: fluid width, still floated left beside the text */
+figure {
+    float: left;
+    width: 35%;
+    /* fluid: photo scales with the screen */
+    margin: 0px 25px 15px 0px;
+    padding: 8px;
+    background-color: #1B2A41;
+    border-radius: 8px;
+}
+
+/* photo fills the frame */
+figure img {
+    width: 100%;
+    display: block;
+}
+
+/* caption under the photo */
+figcaption {
+    color: #EEF2F7;
+    text-align: center;
+    padding-top: 6px;
+}
+
+/* video frame: fluid width so it fits the tablet screen */
+video {
+    width: 80%;
+    /* fluid video width */
+    height: auto;
+    padding: 10px;
+    background-color: #1B2A41;
+    border: 2px solid #324A5F;
+    box-shadow: 10px 10px 5px #324A5F;
+}
+
+
+/* form labels in bold */
+label {
+    font-weight: bold;
+}
+
+/* text boxes: padding and border in the colour scheme */
+input,
+textarea {
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    padding: 6px;
+    border: 1px solid #324A5F;
+    border-radius: 4px;
+}
+
+/* message box: fluid width so it doesn't overflow narrow tablets */
+textarea {
+    width: 90%;
+}
+
+/* buttons: styled like the Week 2 button example */
+button {
+    margin: 10px 10px 0px 0px;
+    padding: 10px 18px;
+    background-color: #F46036;
+    color: #1B2A41;
+    font-weight: bold;
+    border: 2px solid #1B2A41;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px #324A5F;
+    cursor: pointer;
+}
+
+/* button hover state: colours swap and shadow flips (Week 2) */
+button:hover {
+    background-color: #1B2A41;
+    color: #EEF2F7;
+    box-shadow: -5px -5px 3px #324A5F;
+}

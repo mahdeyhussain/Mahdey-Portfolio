@@ -73,3 +73,104 @@ footer {
 footer a {
     color: #EEF2F7;
 }
+
+/* sub-headings in the steel blue from the colour scheme */
+h2 {
+    color: #324A5F;
+    clear: both;
+    /* starts each h2 below any floated photo or boxes above it */
+}
+
+/* project boxes: floated left so two sit side by side (float from Week 1) */
+.project {
+    float: left;
+    width: 395px;
+    min-height: 360px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #324A5F;
+    color: #EEF2F7;
+    border-radius: 10px;
+}
+
+/* project titles with an orange underline bar */
+.project h3 {
+    margin-top: 0px;
+    color: #EEF2F7;
+    border-bottom: 3px solid #F46036;
+    padding-bottom: 5px;
+}
+
+/* pseudo-class: shadow appears when a box is hovered */
+.project:hover {
+    box-shadow: 5px 5px 10px #1B2A41;
+}
+
+/* photo frame: floated left so the intro text wraps beside it */
+figure {
+    float: left;
+    width: 250px;
+    margin: 0px 25px 15px 0px;
+    padding: 8px;
+    background-color: #1B2A41;
+    border-radius: 8px;
+}
+
+/* photo fills the frame */
+figure img {
+    width: 100%;
+    display: block;
+}
+
+/* caption under the photo */
+figcaption {
+    color: #EEF2F7;
+    text-align: center;
+    padding-top: 6px;
+}
+
+/* video frame: border and shadow like the Week 2 example */
+video {
+    width: 480px;
+    height: auto;
+    padding: 10px;
+    background-color: #1B2A41;
+    border: 2px solid #324A5F;
+    box-shadow: 10px 10px 5px #324A5F;
+}
+
+<p><button type="submit">Send Message</button><button type="reset">Clear Form</button></p>
+
+/* form labels in bold */
+label {
+    font-weight: bold;
+}
+
+/* text boxes: padding and border in the colour scheme */
+input,
+textarea {
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    padding: 6px;
+    border: 1px solid #324A5F;
+    border-radius: 4px;
+}
+
+/* buttons: styled like the Week 2 button example */
+button {
+    margin: 10px 10px 0px 0px;
+    padding: 10px 18px;
+    background-color: #F46036;
+    color: #1B2A41;
+    font-weight: bold;
+    border: 2px solid #1B2A41;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px #324A5F;
+    cursor: pointer;
+}
+
+/* button hover state: colours swap and shadow flips (Week 2) */
+button:hover {
+    background-color: #1B2A41;
+    color: #EEF2F7;
+    box-shadow: -5px -5px 3px #324A5F;
+}

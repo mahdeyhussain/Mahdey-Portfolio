@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* full.css - styles for laptops/desktops (960px and wider) */
+
+/* Colour scheme from Adobe Color ("Portfolio Colours"):
+   #1B2A41 deep navy     - header, footer, main text
+   #324A5F steel blue    - project boxes, sub-headings
+   #CCC9DC grey-blue     - page background
+   #EEF2F7 soft white    - wrapper background, light text
+   #F46036 burnt orange  - highlights and buttons */
+
+/* body: whole page. Linear gradient from top to bottom (Week 1) */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    color: #1B2A41;
+    background: #CCC9DC;
+    /* fallback colour if a browser can't show gradients */
+    background: linear-gradient(to bottom, #CCC9DC 0%, #EEF2F7 100%);
+    background-attachment: fixed;
+    /* keeps the gradient fixed to the window so it doesn't repeat on short pages */
+}
+
+/* wrapper: centres all content in a 960px column on laptops (Week 1) */
+#wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EEF2F7;
+}
+
+/* header: angled linear gradient at 45 degrees (Week 1) */
+header {
+    background: #1B2A41;
+    /* fallback colour */
+    background: linear-gradient(45deg, #1B2A41 0%, #324A5F 100%);
+    color: #EEF2F7;
+    padding: 20px;
+}
+
+/* compound style: only the h1 inside the header (Week 1) */
+header h1 {
+    margin: 0px;
+    color: #EEF2F7;
+}
+
+/* nav links: light text with no underline */
+nav a {
+    color: #EEF2F7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* pseudo-class: changes link colour when hovered (Week 1) */
+nav a:hover {
+    color: #F46036;
+}
+
+/* article: space around the main content */
+article {
+    padding: 15px 30px;
+}
+
+/* footer: solid navy bar at the bottom of each page */
+footer {
+    clear: both;
+    background-color: #1B2A41;
+    color: #EEF2F7;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #EEF2F7;
+}
